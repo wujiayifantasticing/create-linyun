@@ -22,7 +22,6 @@
       .hei {
         background-color: rgba(8, 4, 20, 0.832);
       }
-
       .shadow {
         box-shadow: rgb(77, 126, 145) 0px 2px 1px -1px,
           rgba(146, 58, 58, 0.14) 0px 1px 1px 0px,
@@ -49,15 +48,91 @@
       .liebiaoxiang {
         height: 160px;
       }
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+      a:link,
+      a:visited {
+        font-style: italic;
+        display: block;
+        font-weight: bold;
+        border-bottom: 1px solid rgb(60, 100, 125);
+        font-size: 16px;
+        color: #6c79b7;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+      .zhuzitisize {
+        font-size: larger;
+        font-style: inherit;
+        font-display: middle;
+      }
+      a:hover,
+      a:active {
+        background-color: #2b517a;
+      }
       .daohang {
+        font-style: normal;
         padding: 10px 20px;
-        border-bottom: 1px solid rgb(29, 49, 61);
+        border-bottom: 1px solid rgb(114, 150, 172);
         font-size: 14px;
-        color: #a1a4b3;
+        color: #4e5eb0;
       }
       .neirong {
         display: none;
         flex-direction: column;
+      }
+      div.img {
+        border: 1px solid #ccc;
+      }
+
+      div.img:hover {
+        border: 1px solid #777;
+      }
+
+      div.img img {
+        width: 100%;
+        height: auto;
+      }
+
+      div.desc {
+        padding: 15px;
+        text-align: center;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      .responsive {
+        padding: 0 6px;
+        float: left;
+        width: 24.99999%;
+      }
+      img {
+        max-width: 100%; /* 图片最大宽度为容器宽度 */
+        height: auto; /* 高度自适应 */
+        object-fit: cover;
+      }
+      @media only screen and (max-width: 700px) {
+        .responsive {
+          width: 49.99999%;
+          margin: 6px 0;
+        }
+      }
+
+      @media only screen and (max-width: 500px) {
+        .responsive {
+          width: 100%;
+        }
+      }
+
+      .clearfix:after {
+        content: "";
+        display: table;
+        clear: both;
       }
       @media (max-width: 600px) {
         .cebian {
@@ -77,62 +152,92 @@
     </style>
   </head>
   <body class="flex">
-    <!--侧边栏-->
+    <!--左侧边栏-->
     <div style="width: 200px; z-index: 3" class="ceBian flex column hei">
       <!--侧边头像-->
       <div
         style="
-          padding: 10px;
+          padding: px;
           align-items: center;
           justify-content: center;
-          border-bottom: 1px solid #dad2d2;
+          border-bottom: 1px solid #501e1e;
         "
         class="flex lan"
       >
-        <img src="商标.jpg" width="200px" height="60px" />
-        <div style="margin-left: 10px">灵韵</div>
+        <img src="商标.jpg" width="200px" height="100px" />
+        <div style="margin-left: 10px; font-style: oblique">灵韵</div>
       </div>
       <!--导航栏-->
       <div class="flex1">
-        <div class="daohang hei">灵韵平台介绍</div>
-        <div class="daohang hei">灵韵智能听诊器</div>
-        <div class="daohang hei">个人健康平台</div>
-        <div class="daohang hei">合作对象</div>
-        <div class="daohang hei">团队介绍</div>
+        <div class="daohang hei"></div>
+        <ul>
+          <div class="daohang hei">
+            <li><a href="#home">主页介绍</a></li>
+          </div>
+          <!--政策，政治环境，swot分析-->
+          <div class="daohang hei">
+            <li><a href="">灵韵智能听诊器</a></li>
+          </div>
+          <!--外观，相关算法，适配对象-->
+          <div class="daohang hei">
+            <li><a href="">个人健康平台</a></li>
+          </div>
+          <!--代码问题，先不着手-->
+          <div class="daohang hei">
+            <li><a href="">传播途径</a></li>
+          </div>
+          <!--海报，基本规划-->
+          <div class="daohang hei">
+            <li><a href="">公司介绍</a></li>
+          </div>
+          <!--团队成员，团队宗旨，团队目标-->
+        </ul>
       </div>
     </div>
     <!--主区域-->
     <div class="flex flex1 column">
       <!--head1-->
-      <div style="height: 60px; z-index: 2" class="shadow hei"></div>
+      <div
+        style="height: 60px; z-index: 3"
+        class="shadow hei zhuzitisize"
+      ></div>
       <!--content-->
       <div style="overflow: auto" class="flex1 flex neiRong">
         <!--left-->
-        <div style="flex: 3" class="flex column mg8">
+        <div style="flex: 3" class="flex column mgr8">
           <!--data-->
-          <div class="flex shuJuQu">
-            <!--重点数据-->
-            <div class="shuJu white shadow flex1 mgr8"></div>
-            <div class="shuJu white shadow flex1 mgr8"></div>
-            <div class="shuJu white shadow flex1 mgr8"></div>
-            <div class="shuJu white shadow flex1"></div>
-          </div>
           <!--列表区-->
           <div class="flex column">
             <!--againlist-->
-            <div class="liebiaoxiang white mgt8 shadow"></div>
-            <div class="liebiaoxiang white mgt8 shadow"></div>
-            <div class="liebiaoxiang white mgt8 shadow"></div>
-            <div class="liebiaoxiang white mgt8 shadow"></div>
-            <div class="liebiaoxiang white mgt8 shadow"></div>
+            <div class="liebiaoxiang mgt8 shadow">
+              <img src="产品总览.png" white max-width:"100%/>
+            </div>
+            <div class="liebiaoxiang white mgt8 shadow">
+              <img src="产品总览.png" white max-width:"100%/>
+            </div>
+            <div class="liebiaoxiang white mgt8 shadow">
+              <img src="产品总览.png" white max-width:"100%/>
+            </div>
+            <div class="liebiaoxiang white mgt8 shadow">
+              <img src="产品总览.png" white max-width:"100%/>
+            </div>
+            <div class="liebiaoxiang white mgt8 shadow">
+              <img src="产品总览.png" white max-width:"100%/>
+            </div>
           </div>
         </div>
         <!--right-->
         <div style="flex: 1" class="youQu flex column mgr8 mgt8">
-          <!--notice-->
-          <div style="height: 150px" class="white shadow"></div>
-          <!--message-->
-          <div style="height: 300px" class="white shadow mgt8"></div>
+          <!--notice1-->
+          <div style="height: 150px" class="white shadow">
+            <img src="中药1.png" white max-width:"100%/>
+            <!--指定文件输入-->
+          </div>
+          <!--notice2-->
+          <div style="height: 300px" class="white shadow mgt8">
+            <!--指定文件输入-->
+            <img src="中药2.png" white max-width:"100%/>
+          </div>
         </div>
       </div>
     </div>
